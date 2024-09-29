@@ -13,7 +13,6 @@ function Header() {
       <header className="p-3 text-bg-dark head">
         <div className="container">
           <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <img src="src\Image\Blog.png" className="logo" alt="" />
             <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
               <div className="items">
                 <li className="nav-item">
