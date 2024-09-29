@@ -1,0 +1,37 @@
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+.head {
+  background-image: url("https://wallpapercave.com/wp/wp7617144.jpg");
+}
+#shome {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  height: 1.5em;
+  width: 6em;
+  font-size: large;
+}
+#shome #ico,
+#shome #tex {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.5s ease;
+  opacity: 1;
+}
+#shome:hover #tex {
+  opacity: 0;
+  transform: translateY(20px);
+}
+#shome:hover #ico {
+  opacity: 1;
+  transform: translateY(0);
+  color: rgb(49, 137, 237);
+}
+#shome #ico {
+  opacity: 0;
+  transform: translateY(-20px);
+}
