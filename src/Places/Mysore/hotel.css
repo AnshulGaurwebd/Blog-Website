@@ -1,0 +1,17 @@
+.card-hotel {
+  max-width: 100%;
+  margin: 30px auto;
+  max-height: 25%;
+}
+.hotel-text {
+  width: 100%;
+}
+.hotel-image {
+  border-radius: 10px;
+  max-height: 300px;
+  max-width: 300px;
+  background-size: cover;
+}
+.hotel-ani {
+  border: 5px solid blue;
+}

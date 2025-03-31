@@ -1,9 +1,36 @@
-import { useContext, useEffect, useState } from "react";
-import { MdDelete } from "react-icons/md";
+import { useContext, useState } from "react";
+import { MdDelete, MdThumbUp, MdThumbDown, MdMargin } from "react-icons/md";
 import { PostList } from "../store/post-list-store";
 
-function Post({ post, userId }) {
+function Post({ post }) {
   const { deletePost } = useContext(PostList);
+  const [likes, setLikes] = useState(post.reactions?.likes ?? 0);
+
+  // Function to handle Like
+  const handleLike = () => {
+    setLikes((prevLikes) => prevLikes + 1);
+    updateLikes(post._id, likes + 1);
+  };
+
+  // Function to handle Dislike
+  const handleDislike = () => {
+    if (likes > 0) {
+      setLikes((prevLikes) => prevLikes - 1);
+      updateLikes(post._id, likes - 1);
+    }
+  };
+
+  // Function to send updated likes to backend
+  const updateLikes = (postId, newLikes) => {
+    fetch(`http://localhost:5000/update-likes/${postId}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ likes: newLikes }),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log("Updated Likes:", data))
+      .catch((err) => console.error("Error updating likes:", err));
+  };
 
   return (
     <div
@@ -15,23 +42,47 @@ function Post({ post, userId }) {
           {post.title}{" "}
           <span
             className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-            onClick={() => deletePost(post.id)}
+            onClick={() => deletePost(post._id)}
+            style={{ cursor: "pointer" }}
           >
             <MdDelete />
-            <span className="visually-hidden">unread messages</span>
+            <span className="visually-hidden">Delete</span>
           </span>
         </h5>
         <p className="card-text">{post.body}</p>
+
         {post.tags.map((tag) => (
-          <a key={tag} href="#" className="btn btn-primary hashtag">
+          <a
+            key={tag}
+            href="#"
+            className="btn btn-primary hashtag"
+            style={{ margin: "3px" }}
+          >
             {tag}
           </a>
         ))}
-        <div className="alert alert-success reactions" role="alert">
-          special date/days before of my life {post.reactions.likes}.
+
+        {/* Display Date */}
+        <div
+          className="alert alert-info"
+          role="alert"
+          style={{ margin: "5px" }}
+        >
+          📅 Special Date: <strong>{post.date}</strong>
+        </div>
+
+        {/* Like & Dislike Buttons */}
+        <div className="d-flex justify-content-around mt-3">
+          <button onClick={handleLike} className="btn btn-success">
+            <MdThumbUp /> Like ({likes})
+          </button>
+          <button onClick={handleDislike} className="btn btn-danger">
+            <MdThumbDown /> Dislike
+          </button>
         </div>
       </div>
     </div>
   );
 }
+
 export default Post;

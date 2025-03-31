@@ -1,5 +1,5 @@
 import FortData from "./Fort.json";
-function Fort() {
+function FortMysore() {
   return (
     <>
       {FortData.map((forts) => (
@@ -13,13 +13,6 @@ function Fort() {
           <div class="card Zoo">
             <h5 class="text-title">{forts.title}</h5>
             <p class="card-text text">{forts.description}</p>
-            <p className="card-text hotel-text text">
-              Check out for visit{" "}
-              <a href={forts.link} target="_blank">
-                Location
-              </a>
-              !
-            </p>{" "}
           </div>
         </div>
       ))}
@@ -28,4 +21,4 @@ function Fort() {
   );
 }
 
-export default Fort;
+export default FortMysore;

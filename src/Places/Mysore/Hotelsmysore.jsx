@@ -2,7 +2,7 @@ import { LiaStarSolid } from "react-icons/lia";
 import { MdLocationOn } from "react-icons/md";
 import HotelsData from "./Hotels.json";
 import "./hotel.css";
-function Hotels() {
+function HotelsMysore() {
   return (
     <>
       {HotelsData.map((hotel) => (
@@ -57,4 +57,4 @@ function Hotels() {
   );
 }
 
-export default Hotels;
+export default HotelsMysore;

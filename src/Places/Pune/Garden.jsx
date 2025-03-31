@@ -9,13 +9,6 @@ function Garden() {
           <div className="card Zoo ">
             <h5 className="text-title">{gard.title}</h5>
             <p className="card-text text">{gard.description}</p>
-            <p className="card-text hotel-text text">
-              Check out for visit{" "}
-              <a href={gard.link} target="_blank">
-                Location
-              </a>
-              !
-            </p>{" "}
           </div>
         </div>
       ))}

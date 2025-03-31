@@ -1,0 +1,92 @@
+const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
+require("dotenv").config();
+
+const app = express();
+
+// Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true })); // Ensures form-data is parsed
+app.use(cors());
+
+// Connect to MongoDB
+const mongoURI = process.env.MONGO_URI;
+if (!mongoURI) {
+  console.error("Error: MONGO_URI is not defined. Check your .env file.");
+  process.exit(1);
+}
+
+mongoose
+  .connect(mongoURI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("MongoDB Connected"))
+  .catch((err) => console.error("MongoDB Connection Error:", err));
+
+// Define Schema
+const PostSchema = new mongoose.Schema({
+  userId: { type: Number, required: true },
+  title: { type: String, required: true },
+  body: { type: String, required: true },
+  tags: { type: [String], default: [] },
+  date: { type: String, required: true },
+});
+
+const Post = mongoose.model("Post", PostSchema);
+
+// Routes
+
+// Create a new post
+app.post("/create-post", async (req, res) => {
+  try {
+    const { userId, title, body, date, tags } = req.body;
+
+    // Validate required fields
+    if (!userId || !title || !body) {
+      return res
+        .status(400)
+        .json({ message: "userId, title, and body are required" });
+    }
+
+    const newPost = new Post({
+      userId,
+      title,
+      body,
+      tags: tags || [],
+      date: date || new Date().toISOString().split("T")[0],
+    });
+
+    await newPost.save();
+    res.status(201).json(newPost);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+});
+
+// Get all posts
+app.get("/", async (req, res) => {
+  try {
+    const posts = await Post.find();
+    res.json(posts);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+// Delete a post by ID
+app.delete("/delete-post/:id", async (req, res) => {
+  try {
+    const deletedPost = await Post.findByIdAndDelete(req.params.id);
+    if (!deletedPost) {
+      return res.status(404).json({ message: "Post not found" });
+    }
+    res.json({ message: "Post deleted successfully" });
+  } catch (err) {
+    res.status(500).json({ message: "Server error", error: err.message });
+  }
+});
+
+// Start Server
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

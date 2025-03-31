@@ -1,0 +1,44 @@
+[
+  {
+    "src": "https://images.unsplash.com/photo-1627442433449-317a17fb6211?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWxzJTIwamFpcHVyfGVufDB8fDB8fHww",
+    "title": "HOTELS",
+    "body": "Mysore offers a blend of heritage, luxury, and budget accommodations, catering to all travelers. From royal palaces to modern hotels and serene resorts, it ensures a comfortable stay with rich cultural charm.",
+    "tag": "-> FEEL RELAXED",
+    "link": "/mysore/hotels"
+  },
+  {
+    "src": "https://images.unsplash.com/photo-1705861144174-40f57206631e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8d2lsZGxpZmUlMjBqYWlwdXJ8ZW58MHx8MHx8fDA%3D",
+    "title": "WILDLIFE",
+    "body": "Mysore is home to diverse wildlife, with national parks and sanctuaries teeming with elephants, tigers, and exotic birds. Its lush forests and reserves offer thrilling safaris and nature experiences, making it a paradise for wildlife enthusiasts.",
+    "tag": "-> FLORA & FAUNA",
+    "link": "/mysore/wildlife"
+  },
+  {
+    "src": "https://images.unsplash.com/photo-1705861144570-00ede2bc7e7f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzZXVtJTIwamFpcHVyfGVufDB8fDB8fHww",
+    "title": "MUSEUM",
+    "body": " Mysore boasts a rich collection of museums showcasing royal heritage, art, and history. From grand palatial museums to unique galleries, they offer insights into the city's cultural and historical legacy.",
+    "tag": "-> CREATIVITY",
+    "link": "/mysore/museums"
+  },
+  {
+    "src": "https://images.unsplash.com/photo-1705861145407-62f12184e563?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "title": "FORTS/PALACES",
+    "body": "Mysore is home to historic forts that reflect its royal past and architectural grandeur. These forts stand as symbols of the region’s rich heritage, offering a glimpse into its military and cultural history.",
+    "tag": "-> ANCIENT ERA",
+    "link": "/mysore/forts"
+  },
+  {
+    "src": "https://media.gettyimages.com/id/56806692/photo/high-angle-view-of-a-formal-garden-mughal-gardens-jaigarh-fort-jaipur-rajasthan-india.jpg?s=612x612&w=0&k=20&c=zlnakGqODvcuvI-dKpySsSZV6fsQrqXBW8Kf26tyy2I=",
+    "title": "GARDENS",
+    "body": "Mysore is adorned with beautiful gardens featuring lush greenery, vibrant flowers, and serene landscapes. These well-maintained spaces offer a perfect retreat for relaxation, leisure walks, and nature appreciation.",
+    "tag": "-> PEACE In NATURE",
+    "link": "/mysore/gardens"
+  },
+  {
+    "src": "https://media.gettyimages.com/id/585021975/photo/chandpol-bazaar-near-chandpol-gate.jpg?s=612x612&w=0&k=20&c=GfEjt40FNIL1N3SobNfvcSybGZoMRkjjRJ139NAUn6c=",
+    "title": "MARKETS",
+    "body": "Mysore's markets are vibrant and bustling, offering a mix of traditional handicrafts, silk sarees, spices, and local products. These lively bazaars provide a colorful shopping experience, reflecting the city's cultural richness.",
+    "tag": "-> BUY SOMETHING",
+    "link": "/mysore/markets"
+  }
+]

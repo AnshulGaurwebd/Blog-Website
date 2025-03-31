@@ -21,13 +21,6 @@ function Hotels() {
                 <p className="card-text hotel-text text">
                   <MdLocationOn /> {hotel.address}
                 </p>{" "}
-                <p className="card-text hotel-text text">
-                  Check out for booking and offers{" "}
-                  <a href={hotel.link} target="_blank">
-                    official website
-                  </a>
-                  !
-                </p>{" "}
                 <p className="text">
                   This Property Offers:
                   <br />

@@ -1,0 +1,44 @@
+[
+  {
+    "src": "https://images.unsplash.com/photo-1627442433449-317a17fb6211?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWxzJTIwamFpcHVyfGVufDB8fDB8fHww",
+    "title": "HOTELS",
+    "body": "Jaipur's hotels range from luxurious palaces to \n budget-friendly options, offering a mix of traditional charm \n and modern comforts. Many feature rooftop dining with stunning \nviews of the city's historic landmarks.",
+    "tag": "-> FEEL RELAXED",
+    "link": "/hotels"
+  },
+  {
+    "src": "https://images.unsplash.com/photo-1705861144174-40f57206631e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8d2lsZGxpZmUlMjBqYWlwdXJ8ZW58MHx8MHx8fDA%3D",
+    "title": "WILDLIFE",
+    "body": "Jaipur's wildlife features leopards, deer, and a wide range of \n bird species, providing rich opportunities for nature lovers \n and wildlife enthusiasts to experience diverse flora and \n fauna.",
+    "tag": "-> FLORA & FAUNA",
+    "link": "/wildlife"
+  },
+  {
+    "src": "https://images.unsplash.com/photo-1705861144570-00ede2bc7e7f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzZXVtJTIwamFpcHVyfGVufDB8fDB8fHww",
+    "title": "MUSEUM",
+    "body": " Jaipur's museums offer an immersive look into its royal past,\n art, and traditional crafts. They provide a rich exploration\n of the city's cultural and historical heritage, reflecting its\n  vibrant legacy.",
+    "tag": "-> CREATIVITY",
+    "link": "/museums"
+  },
+  {
+    "src": "https://images.unsplash.com/photo-1705861145407-62f12184e563?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "title": "FORTS",
+    "body": "Jaipur's forts are renowned for their impressive architecture,\nhistorical significance, and panoramic city views, showcasing\nthe grandeur and defensive strategies of Rajasthan's royal\npast.",
+    "tag": "-> ANCIENT ERA",
+    "link": "/forts"
+  },
+  {
+    "src": "https://media.gettyimages.com/id/56806692/photo/high-angle-view-of-a-formal-garden-mughal-gardens-jaigarh-fort-jaipur-rajasthan-india.jpg?s=612x612&w=0&k=20&c=zlnakGqODvcuvI-dKpySsSZV6fsQrqXBW8Kf26tyy2I=",
+    "title": "GARDENS",
+    "body": "Jaipur's gardens offer lush greenery, vibrant flowers, and\ntranquil water features, creating serene spaces that blend\nnatural beauty with historical charm. They provide peaceful\nretreats amidst the city's vibrant atmosphere.",
+    "tag": "-> PEACE In NATURE",
+    "link": "/gardens"
+  },
+  {
+    "src": "https://media.gettyimages.com/id/585021975/photo/chandpol-bazaar-near-chandpol-gate.jpg?s=612x612&w=0&k=20&c=GfEjt40FNIL1N3SobNfvcSybGZoMRkjjRJ139NAUn6c=",
+    "title": "MARKETS",
+    "body": "Jaipur's markets are bustling hubs of color and activity,\noffering a variety of traditional crafts, textiles, jewelry,\nand spices, reflecting the city's vibrant culture and rich\nheritage.",
+    "tag": "-> BUY SOMETHING",
+    "link": "/markets"
+  }
+]

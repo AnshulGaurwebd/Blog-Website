@@ -16,6 +16,14 @@ import { Auth0Provider } from "@auth0/auth0-react";
 import Way_to_post from "./components/Way_to_post.jsx";
 import Visit from "./components/Visit.jsx";
 import About from "./components/About.jsx";
+import VisitPune from "./Places/Pune/VisitPune.jsx";
+import VisitMysore from "./Places/Mysore/VisitMysore.jsx";
+import HotelsMysore from "./Places/Mysore/Hotelsmysore.jsx";
+import FortMysore from "./Places/Mysore/FortMysore.jsx";
+import GardenMysore from "./Places/Mysore/GardenMysore.jsx";
+import MarketMysore from "./Places/Mysore/MarketMysore.jsx";
+import MuseumMysore from "./Places/Mysore/MuseumMysore.jsx";
+import WildlifeMysore from "./Places/Mysore/WildlifeMysore.jsx";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +40,14 @@ const router = createBrowserRouter([
       { path: "/hotels", element: <Hotels /> },
       { path: "/wildlife", element: <Wildlife /> },
       { path: "/jaipur", element: <Visit /> },
+      { path: "/pune", element: <VisitPune /> },
+      { path: "/mysore", element: <VisitMysore /> },
+      { path: "/mysore/forts", element: <FortMysore /> },
+      { path: "/mysore/gardens", element: <GardenMysore /> },
+      { path: "/mysore/hotels", element: <HotelsMysore /> },
+      { path: "/mysore/markets", element: <MarketMysore /> },
+      { path: "/mysore/museums", element: <MuseumMysore /> },
+      { path: "/mysore/wildlife", element: <WildlifeMysore /> },
       {
         path: "/create-post",
         element: <CreatePost />,

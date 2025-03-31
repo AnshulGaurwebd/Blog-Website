@@ -1,7 +1,7 @@
 import Tour from "./Tour";
 import State from "./State";
 
-function Visit() {
+function VisitPune() {
   return (
     <>
       <State />
@@ -70,7 +70,7 @@ function Visit() {
         </div>
         <div class="text-about">
           <h3>
-            <b>Welcome To Jaipur</b>
+            <b>Welcome To Pune</b>
           </h3>
           <p>
             Jaipur, known as the "Pink City," is the capital of the Indian state
@@ -91,4 +91,4 @@ function Visit() {
   );
 }
 
-export default Visit;
+export default VisitPune;

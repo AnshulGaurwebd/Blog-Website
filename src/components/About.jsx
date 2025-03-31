@@ -40,15 +40,16 @@ function About() {
             <b>Anshul Gaur, BE</b>
           </h3>
           <h5 className="title">
-            <b>Software Engineer, Front-End Developer</b>
+            <b>Software Engineer, Full-Stack Developer</b>
           </h5>
           <p className="card-text text">
-            With a strong foundation in front-end development and hands-on
-            experience in HTML, CSS, React.js, and Next.js, I am passionate
-            about creating user-friendly interfaces and delivering high-quality
-            web experiences. As a software engineering student, I specialize in
-            building responsive and dynamic web applications, always striving
-            for clean, accessible, and visually appealing layouts. <br />
+            With a strong foundation in Full-Stack development and hands-on
+            experience in HTML, CSS, React.js, Next.js, Node.js, Express.js and
+            MongoDB I am passionate about creating user-friendly interfaces and
+            delivering high-quality web experiences. As a software engineering
+            student, I specialize in building responsive and dynamic web
+            applications, always striving for clean, accessible, and visually
+            appealing layouts. <br />
             <br />
             My expertise in React.js enables me to craft efficient,
             component-based applications that prioritize user interaction.
