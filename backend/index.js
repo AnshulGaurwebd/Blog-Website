@@ -13,7 +13,7 @@ const _dirname = path.resolve();
 app.use(express.static(path.join(_dirname, "/frontend/dist")));
 
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: "https://blog-website-scrk.onrender.com",
   credentials: true,
 };
 app.use(cors(corsOptions));

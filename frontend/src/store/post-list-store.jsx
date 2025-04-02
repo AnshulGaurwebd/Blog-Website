@@ -38,7 +38,7 @@ function PostListProvider({ children }) {
   };
 
   const deletePost = (postId) => {
-    fetch(`http://localhost:5000/delete-post/${postId}`, {
+    fetch(`https://blog-website-scrk.onrender.com/delete-post/${postId}`, {
       method: "DELETE",
     })
       .then((res) => {
@@ -62,9 +62,12 @@ function PostListProvider({ children }) {
     setFetching(true);
     const controller = new AbortController();
     const signal = controller.signal;
-    console.log("Fetching from:", "http://localhost:5000/api/posts");
+    console.log(
+      "Fetching from:",
+      "https://blog-website-scrk.onrender.com/api/posts"
+    );
 
-    fetch("http://localhost:5000/api/posts", { signal }); // Updated to "/api/posts"
+    fetch("https://blog-website-scrk.onrender.com/api/posts", { signal }); // Updated to "/api/posts"
     then((res) => {
       if (!res.ok) {
         throw new Error("Failed to fetch posts");

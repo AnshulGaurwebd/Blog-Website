@@ -22,7 +22,7 @@ function Post({ post }) {
 
   // Function to send updated likes to backend
   const updateLikes = (postId, newLikes) => {
-    fetch(`http://localhost:5000/update-likes/${postId}`, {
+    fetch(`https://blog-website-scrk.onrender.com/update-likes/${postId}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ likes: newLikes }),
