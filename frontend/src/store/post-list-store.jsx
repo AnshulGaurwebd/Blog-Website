@@ -78,8 +78,17 @@ function PostListProvider({ children }) {
         return res.json();
       })
       .then((data) => {
-        console.log("Fetched posts:", data); // Debugging
-        addInitialPost(data || []); // Fix: Use data instead of data.posts
+        console.log("Fetched posts:", data);
+
+        // Extract posts array correctly
+        const postsArray = Array.isArray(data.data) ? data.data : [];
+
+        if (postsArray.length > 0) {
+          addInitialPost(postsArray);
+        } else {
+          console.error("Invalid data format:", data);
+        }
+
         setFetching(false);
       })
       .catch((err) => {
