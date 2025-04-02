@@ -62,14 +62,15 @@ function PostListProvider({ children }) {
     setFetching(true);
     const controller = new AbortController();
     const signal = controller.signal;
+    console.log("Fetching from:", "http://localhost:5000/api/posts");
 
-    fetch("http://localhost:5000/", { signal }) // Make sure your backend is running
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("Failed to fetch posts");
-        }
-        return res.json();
-      })
+    fetch("http://localhost:5000/api/posts", { signal }); // Updated to "/api/posts"
+    then((res) => {
+      if (!res.ok) {
+        throw new Error("Failed to fetch posts");
+      }
+      return res.json();
+    })
       .then((data) => {
         console.log("Fetched posts:", data); // Debugging
         addInitialPost(data); // Fix: Use data instead of data.posts
