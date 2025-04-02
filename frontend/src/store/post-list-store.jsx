@@ -79,7 +79,7 @@ function PostListProvider({ children }) {
       })
       .then((data) => {
         console.log("Fetched posts:", data); // Debugging
-        addInitialPost(data.posts || []); // Fix: Use data instead of data.posts
+        addInitialPost(data || []); // Fix: Use data instead of data.posts
         setFetching(false);
       })
       .catch((err) => {
