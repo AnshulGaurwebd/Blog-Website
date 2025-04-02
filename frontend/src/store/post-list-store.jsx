@@ -67,13 +67,13 @@ function PostListProvider({ children }) {
       "https://blog-website-scrk.onrender.com/api/posts"
     );
 
-    fetch("https://blog-website-scrk.onrender.com/api/posts", { signal }); // Updated to "/api/posts"
-    then((res) => {
-      if (!res.ok) {
-        throw new Error("Failed to fetch posts");
-      }
-      return res.json();
-    })
+    fetch("https://blog-website-scrk.onrender.com/api/posts", { signal })
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Failed to fetch posts");
+        }
+        return res.json();
+      })
       .then((data) => {
         console.log("Fetched posts:", data); // Debugging
         addInitialPost(data); // Fix: Use data instead of data.posts
