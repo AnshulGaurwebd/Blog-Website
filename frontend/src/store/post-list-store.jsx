@@ -8,6 +8,9 @@ export const PostList = createContext({
 });
 
 const postListReducer = (current, action) => {
+  if (!Array.isArray(current)) {
+    current = []; // Ensure it's an array
+  }
   let newPostList = current;
   if (action.type === "DELETE_POST") {
     newPostList = current.filter((post) => post._id !== action.payload.postId); // Use _id instead of id (MongoDB uses _id)
@@ -76,7 +79,7 @@ function PostListProvider({ children }) {
       })
       .then((data) => {
         console.log("Fetched posts:", data); // Debugging
-        addInitialPost(data); // Fix: Use data instead of data.posts
+        addInitialPost(data.posts || []); // Fix: Use data instead of data.posts
         setFetching(false);
       })
       .catch((err) => {
