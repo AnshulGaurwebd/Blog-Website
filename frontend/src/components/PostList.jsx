@@ -32,7 +32,7 @@ function PostList() {
       <div className="postlist">
         {!fetching &&
           filteredPosts.map((post) => (
-            <Post key={post.id} post={post} userId={post.id} />
+            <Post key={post._id} post={post} userId={post._id} />
           ))}
       </div>
     </>
