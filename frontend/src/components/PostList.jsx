@@ -7,7 +7,7 @@ import Loading from "./Loading";
 function PostList() {
   const { postList, fetching } = useContext(Data);
   const [searchQuery, setSearchQuery] = useState("");
-  const filteredPosts = postList.filter(
+  const filteredPosts = (Array.isArray(postList) ? postList : []).filter(
     (post) =>
       searchQuery.trim() === "" ||
       (post?.title?.toLowerCase() || "").includes(searchQuery.toLowerCase()) ||
