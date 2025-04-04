@@ -13,6 +13,13 @@ function FortMysore() {
           <div class="card Zoo">
             <h5 class="text-title">{forts.title}</h5>
             <p class="card-text text">{forts.description}</p>
+            <p className="card-text hotel-text text">
+              Check out for visit{" "}
+              <a href={forts.link} target="_blank">
+                Location
+              </a>
+              !
+            </p>{" "}
           </div>
         </div>
       ))}

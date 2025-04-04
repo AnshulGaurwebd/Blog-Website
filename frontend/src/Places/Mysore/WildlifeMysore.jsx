@@ -49,6 +49,13 @@ function WildlifeMysore() {
           <div className="card Zoo ">
             <h5 className="text-title">{wild.title}</h5>
             <p className="card-text text">{wild.description}</p>
+            <p className="card-text hotel-text text">
+              Check out for visit{" "}
+              <a href={wild.link} target="_blank">
+                Location
+              </a>
+              !
+            </p>{" "}
           </div>
         </div>
       ))}

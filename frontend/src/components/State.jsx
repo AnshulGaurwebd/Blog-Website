@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 
 const stateDistrictData = {
   Rajasthan: ["jaipur"],
-  Maharashtra: ["Pune"],
   Karnataka: ["Mysore"],
 };
 
