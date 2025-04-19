@@ -3,6 +3,7 @@ import Post from "./Post";
 import { PostList as Data } from "../store/post-list-store";
 import Welcome from "./Welcome";
 import Loading from "./Loading";
+import { Homeintro } from "./Homeintro";
 
 function PostList() {
   const { postList, fetching } = useContext(Data);
@@ -17,6 +18,7 @@ function PostList() {
 
   return (
     <>
+      <Homeintro />
       <input
         type="text"
         placeholder="Search posts..."
