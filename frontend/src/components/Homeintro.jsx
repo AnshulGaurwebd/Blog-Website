@@ -13,12 +13,12 @@ export const Homeintro = () => {
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h1 class="card-title">Welcome To The TraveloBlog</h1>
-                <h5 className="card-title">
+                <h1 class="card-title postba">Welcome To The TraveloBlog</h1>
+                <h5 className="card-title postba">
                   This Is The World's Best Website For Making You Explore World
                   Easily.
                 </h5>
-                <p class="card-text">
+                <p class="card-text postba">
                   {" "}
                   Welcome to my travel blog—a space where we share our
                   adventures and help you plan yours! Here, you’ll find travel
@@ -27,12 +27,14 @@ export const Homeintro = () => {
                   is your go-to companion for making every journey memorable.
                   Let’s explore the world together, one blog at a time!
                 </p>
-                <div className="btn btn-primary">
+                <div className="btn">
                   <a href="/way">
-                    <button className="btn btn-primary">create now</button>
+                    <button className="btn btn-primary postba">
+                      create now
+                    </button>
                   </a>
                   <a href="/jaipur">
-                    <button className="btn">explore now</button>
+                    <button className="btn postba">explore now</button>
                   </a>
                 </div>
               </div>
