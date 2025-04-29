@@ -40,10 +40,15 @@ function PostListProvider({ children }) {
     });
   };
 
-  const deletePost = (postId) => {
-    fetch(`https://blog-website-scrk.onrender.com/delete-post/${postId}`, {
-      method: "DELETE",
-    })
+  const deletePost = (postId, userName) => {
+    fetch(
+      `https://blog-website-scrk.onrender.com/delete-post/${postId}?userName=${encodeURIComponent(
+        userName
+      )}`,
+      {
+        method: "DELETE",
+      }
+    )
       .then((res) => {
         if (!res.ok) {
           throw new Error("Failed to delete post");

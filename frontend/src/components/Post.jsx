@@ -1,10 +1,21 @@
 import { useContext, useState } from "react";
 import { MdDelete, MdThumbUp, MdThumbDown, MdMargin } from "react-icons/md";
 import { PostList } from "../store/post-list-store";
+import { useAuth0 } from "@auth0/auth0-react";
 
 function Post({ post }) {
   const { deletePost } = useContext(PostList);
   const [likes, setLikes] = useState(post.reactions?.likes ?? 0);
+  const { user } = useAuth0();
+
+  const handleDelete = () => {
+    if (user.name !== post.userId) {
+      alert("You can't delete others' posts.");
+      return;
+    }
+
+    deletePost(post._id, user.name); // Pass user name as argument
+  };
 
   // Function to handle Like
   const handleLike = () => {
@@ -40,14 +51,16 @@ function Post({ post }) {
       <div className="card-body">
         <h5 className="card-title">
           {post.title}{" "}
-          <span
-            className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-            onClick={() => deletePost(post._id)}
-            style={{ cursor: "pointer" }}
-          >
-            <MdDelete />
-            <span className="visually-hidden">Delete</span>
-          </span>
+          {user.name === post.userId && (
+            <span
+              className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              onClick={handleDelete}
+              style={{ cursor: "pointer" }}
+            >
+              <MdDelete />
+              <span className="visually-hidden">Delete</span>
+            </span>
+          )}
         </h5>
         <p className="card-text">{post.body}</p>
 

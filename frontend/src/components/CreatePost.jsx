@@ -1,12 +1,13 @@
 import { useContext, useRef } from "react";
 import { PostList } from "../store/post-list-store";
 import { Form, useNavigate } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 
 function CreatePost() {
   const { addPost } = useContext(PostList);
+  const { user, isAuthenticated } = useAuth0();
 
   const navigate = useNavigate();
-  const userIdEl = useRef();
   const postTitleEl = useRef();
   const bodyEl = useRef();
   const tagsEl = useRef();
@@ -14,7 +15,10 @@ function CreatePost() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const userId = userIdEl.current.value;
+    if (!isAuthenticated) {
+      alert("You must be logged in to create a post.");
+      return;
+    }
     const postTitle = postTitleEl.current.value;
     const postBody = bodyEl.current.value;
     const tags = tagsEl.current.value.split(" ");
@@ -24,7 +28,7 @@ function CreatePost() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        userId: userId,
+        userId: user.name,
         title: postTitle,
         body: postBody,
         tags: tags,
@@ -41,19 +45,6 @@ function CreatePost() {
 
   return (
     <Form method="POST" onSubmit={handleSubmit} className="create-post postba">
-      <div className="mb-3">
-        <label htmlFor="userId" className="form-label">
-          Enter post number
-        </label>
-        <input
-          type="text"
-          name="userId"
-          ref={userIdEl}
-          className="form-control"
-          required
-        />
-      </div>
-
       <div className="mb-3">
         <label htmlFor="title" className="form-label">
           Post Title

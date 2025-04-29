@@ -32,7 +32,7 @@ mongoose
 
 // Define Schema
 const PostSchema = new mongoose.Schema({
-  userId: { type: Number, required: true },
+  userId: { type: String, required: true },
   title: { type: String, required: true },
   body: { type: String, required: true },
   tags: { type: [String], default: [] },
