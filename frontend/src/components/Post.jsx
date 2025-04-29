@@ -9,12 +9,16 @@ function Post({ post }) {
   const { user } = useAuth0();
 
   const handleDelete = () => {
+    if (!user) {
+      alert("You must be logged in to delete a post.");
+      return;
+    }
     if (user.name !== post.userId) {
       alert("You can't delete others' posts.");
       return;
     }
 
-    deletePost(post._id, user.name); // Pass user name as argument
+    deletePost(post._id); // Pass user name as argument
   };
 
   // Function to handle Like
@@ -51,7 +55,7 @@ function Post({ post }) {
       <div className="card-body">
         <h5 className="card-title">
           {post.title}{" "}
-          {user.name === post.userId && (
+          {user && user.name === post.userId && (
             <span
               className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
               onClick={handleDelete}
